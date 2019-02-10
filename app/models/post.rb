@@ -6,7 +6,7 @@ class Post < ActiveRecord::Base
   
 
   def validate(post)
-    unless post.title.includes? "Won't Believe" || "Secret" || "Top [number]" || "Guess"
+    unless post.title.contains? "Won't Believe" || "Secret" || "Top [number]" || "Guess"
       return false
     end
   end
